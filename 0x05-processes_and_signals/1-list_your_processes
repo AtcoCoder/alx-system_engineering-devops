@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#  1-list_your_processes: Displays a list of currently running processes.
+
+ps axuf
