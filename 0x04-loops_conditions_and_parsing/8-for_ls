@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#  8-for_ls: Displays:
+#+ The content of the current directory
+#+ Ina list format
+# Where only the part of the name after the first dash is displayed
+
+for line in `ls`
+do
+	name=$(echo $line | cut -f2 -d-)
+	echo $name
+done
