@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# 4-to_infinity_and_beyond: Displays 'To infinity and beyond' indefinitely.
+
+valid="true"
+
+while [ $valid ]
+do
+echo "To infinity and beyond"
+sleep 2
+done
