@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+2-while_best_school: displays "Best School" 10 times using while loop.
+
+valid="true"
+counter=1
+
+while [ $valid ]
+do
+echo "Best School"
+if [ $counter -eq 10 ]
+then
+break
+fi
+((counter++))
+done
