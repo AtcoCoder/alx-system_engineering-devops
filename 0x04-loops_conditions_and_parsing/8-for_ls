@@ -4,8 +4,8 @@
 #+ Ina list format
 # Where only the part of the name after the first dash is displayed
 
-for line in `ls`
+for line in *
 do
-	name=$(echo $line | cut -f2 -d-)
-	echo $name
+	name=$(echo "$line" | cut -f2 -d-)
+	echo "$name"
 done
