@@ -3,4 +3,4 @@
 # shellcheck disable=SC2009
 
 process_pid=$(ps a | grep ./4-to_infinity_and_beyond | head -n 1 | cut -f2 -d " ")
-kill -9 "${process_pid}"
+kill -15 "${process_pid}"
