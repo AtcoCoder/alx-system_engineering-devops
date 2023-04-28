@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # 5-dont_stop_me_now: Stops 4-to_infinity_and_beyond process.
-# shellcheck disable=SC2009
 
 process_pid=$(pgrep -f 4-to_infinity_and_beyond)
 kill -15 "${process_pid}"

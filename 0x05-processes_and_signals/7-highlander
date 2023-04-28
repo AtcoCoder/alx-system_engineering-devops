@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#  7-highlander: Displays:
+#+ "To infinity and beyond" indefinitely
+#+ sleeps for 2 seconds between each iteration
+#+ "I am invincible!!!" when receiving a SIGTERM signal
+
+valid="true"
+
+while [ "$valid" ]
+do
+trap "echo I am invincible!!!" 15
+echo "To infinity and beyond"
+sleep 2
+done
