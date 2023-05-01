@@ -12,14 +12,14 @@ do
 	((remainder = min % 60))
 	if [ $remainder -eq 0 ]
 	then
-		((hours++))
 		echo "Hour: $hours"
+		((hours++))
 		min=1
 	else
 		echo "$min"
 		((min++))
 	fi
-	if [[ ( $hours -eq 12 && $min -eq 59 ) ]]
+	if [[ ( $hours -eq 13 && $min -eq 59 ) ]]
 	then
 		echo "$min"
 		break
