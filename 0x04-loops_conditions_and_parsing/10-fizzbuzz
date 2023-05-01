@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#  10-fizzbuzz: Displays numbers from 1 to 100.
+#+ Displays FizzBuzz when the number is a multiple of 3 and 5
+#+ Displays Fizz when the number is multiple of 3
+#+ Otherwise, displays the number
+
+for ((n=1; n<=100; n++))
+do
+	r3=$((n%3))
+	r5=$((n%5))
+	if [[ (  $r3 == 0 && $r5 == 0 ) ]]
+	then
+		echo FizzBuzz
+	elif [[ ( $r3 == 0 ) ]]
+	then
+		echo Fizz
+	elif [[ ( $r5 == 0 ) ]]
+	then
+		echo Buzz
+	else
+		echo $n
+	fi
+done
