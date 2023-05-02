@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#  101-tell_the_story_of_passwd: Displays the content of the file /etc/passwd
+#+ with a short story
+
+while IFS=: read -a line_array -r
+do
+	echo -n "The user ${line_array[0]} is part of the ${line_array[3]}, "
+	echo -n "lives in ${line_array[5]} and rides ${line_array[6]}. "
+	echo -n "${line_array[2]}'s place is protected by the passcode ${line_array[1]}, "
+	echo "more info about the user here: ${line_array[4]}"
+done < "/etc/passwd"
