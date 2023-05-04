@@ -6,6 +6,6 @@
 cp /etc/hosts ~/hosts.new
 sed -i '0,/127\.0\.0\.1/{s//127\.0\.0\.2/}' ~/hosts.new
 cp -f ~/hosts.new ~/hosts.second
-sed -i '0,/localhost/{s/localhost/&\n8\.8\.8\.8        facebook\.com/}' ~/hosts.second
+sed -i '0,/localhost/{s/localhost/&\n8\.8\.8\.8        facebook\.com/}' ~/ht.bk
 cat ~/hosts.second > /etc/hosts
 rm ~/hosts.second ~/hosts.new
