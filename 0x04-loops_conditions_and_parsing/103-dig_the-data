@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#  103-dig_the-data: Displays the visitor IP along with the
+#+ HTTP status code from the Apache log file and the number
+#+ of occurrence sorted reversed.
+
+awk '{ print $1,$9 }' apache-access.log | sort | uniq -c | sort -nr
