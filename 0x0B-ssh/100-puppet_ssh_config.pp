@@ -1,13 +1,11 @@
 # Make changes to our ssh configuration file
 
-file_line { 'Append a line':
-  ensure => 'present',
-  path   => '/etc/ssh/ssh_config',
-  line   => '    PasswordAuthentication no',
+file { '/etc/ssh/ssh_config':
+  ensure  => file,
+  content => "\nPasswordAuthentication no\nIdentityFile ~/.ssh/school\n",
+  notify  => Exec['ssh_reload'],
 }
 
-file_line { 'Append a line':
-  ensure => 'present',
-  path   => '/etc/ssh/ssh_config',
-  line   => '    IndentityFile ~/.ssh/school',
+exec { 'ssh_reload':
+  command => '/usr/sbin/service ssh reload'
 }
