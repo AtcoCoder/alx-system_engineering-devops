@@ -8,10 +8,10 @@ file { 'Check file',
 }->
 file_line { 'Append a line':
   path    => '~/etc/ssh/ssh_config',
-  line    => '\tPasswordAuthentication no',
+  line    => '    PasswordAuthentication no',
 }->
 file_line { 'Append a line':
   path    => '~/etc/ssh/ssh_config',
-  line    => '\tIndentityFile ~/.ssh/school',
+  line    => '    IndentityFile ~/.ssh/school',
   replace => true,
 }
