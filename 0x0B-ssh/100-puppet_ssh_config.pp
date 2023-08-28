@@ -5,6 +5,7 @@ file_line { 'Append a line':
   ensure  => present,
   path    => '/etc/ssh/ssh_config',
   line    => '    PasswordAuthentication no',
+  replace => true,
 }
 
 file_line { 'Append a line':
