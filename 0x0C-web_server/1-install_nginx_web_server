@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Configures a new Ubuntu machine
+
+sudo apt-get -y install nginx
+
+sudo ufw allow 'Nginx HTTP'
+
+sudo service nginx restart
