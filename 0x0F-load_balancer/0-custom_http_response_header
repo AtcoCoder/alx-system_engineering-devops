@@ -15,6 +15,7 @@ sudo sed -i "s/root \/var\/www\/html;/root \/var\/www\/html;\n\n\tlocation \/red
 
 sudo sed -i "s/listen 80 default_server;/listen 80 default_server;\n\n\terror_page 404 \/404.html;\n\tlocation \/404.html {\n\t\tinternal;\n\t}/" /etc/nginx/sites-available/default
 
-sudo sed -i "s/root \/var\/www\/html;/root \/var\/www\/html;\n\n\tadd_header X-Served-By $hostname;"
+# shellcheck disable=SC2154
+sudo sed -i "s/root \/var\/www\/html;/root \/var\/www\/html;\n\n\tadd_header X-Served-By ${hostname};"
 
 sudo service nginx restart
