@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Installs and configures a nginx server
 
-apt-get -y update
-apt-get -y install nginx
+rm -r /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
