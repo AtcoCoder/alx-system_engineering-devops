@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 # Web stack debugging 1
-
-sed -e "s/8080/80/g" /etc/nginx/sites-enabled/default
-
+sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
 service nginx restart
-
-kill "$(pidof nginx)"
+kill -9 "$(pidof nginx)"
