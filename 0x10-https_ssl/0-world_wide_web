@@ -16,6 +16,10 @@ print_output () {
     show_subdomain $1 $record_type $destination
 }
 
+if [ $# -eq 0 ];
+then
+    exit 1
+fi
 if [ $# -eq 1 ];
 then
     for subdomain in 'www' 'lb-01' 'web-01' 'web-02';
