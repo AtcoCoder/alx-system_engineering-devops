@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Prints the user id of user name passed in as the argument
+
+sudo -u "$1" whoami
