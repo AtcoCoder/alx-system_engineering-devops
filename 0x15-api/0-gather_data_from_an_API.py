@@ -23,4 +23,4 @@ n_done = len(tasks_done)
 
 print("Employee {} is done with tasks({}/{})".format(name, n_done, n_tasks))
 for todo in tasks_done:
-    print(' {}'.format(todo))
+    print('\t {}'.format(todo))
