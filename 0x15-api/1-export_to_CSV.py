@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Gather data from an API"""
-import requests
 import csv
+import requests
 import sys
 
 if __name__ == '__main__':
@@ -24,5 +24,5 @@ if __name__ == '__main__':
         for todo in todos:
             title = todo['title']
             task_status = todo['completed']
-            row = [userId, name, task_status, title]
+            row = [str(userId), str(name), str(task_status), str(title)]
             writer.writerow(row)
