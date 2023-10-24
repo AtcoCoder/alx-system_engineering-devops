@@ -17,7 +17,7 @@ if __name__ == '__main__':
     user = response_1.json()
     todos = response_2.json()
 
-    name = user['name']
+    name = user['username']
 
     with open(csv_file, 'w') as file:
         writer = csv.writer(file, quotechar='"', quoting=csv.QUOTE_ALL)
