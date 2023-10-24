@@ -20,9 +20,11 @@ if __name__ == '__main__':
     name = user['name']
 
     with open(csv_file, 'w') as file:
-        writer = csv.writer(file)
+        writer = csv.writer(file, quotechar='"', quoting=csv.QUOTE_ALL)
         for todo in todos:
             title = todo['title']
             task_status = todo['completed']
-            row = [str(userId), str(name), str(task_status), str(title)]
+            new_name = name
+            user_id = userId
+            row = [user_id, new_name, task_status, title]
             writer.writerow(row)
