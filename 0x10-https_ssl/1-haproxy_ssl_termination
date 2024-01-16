@@ -36,8 +36,8 @@ defaults
 
 backend web-backend
 	balance roundrobin
-	server 105584-web-01 35.153.19.110:80 check
-	server 105584-web-02 100.25.46.48:80 check
+	server 105584-web-01 18.207.1.231:80 check
+	server 105584-web-02 52.91.153.215:80 check
 
 frontend http
 	bind *:80
